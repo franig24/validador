@@ -15,7 +15,7 @@ export default function Validador(params) {
 
 
 
-    if(clave === "uvalpo" && click) return <a onClick = {()=>setClick(false)}>Funciona luego</a>
+    if(clave === "uvalpo" && click) return <a onClick = {()=>setClick(false)}>Presione aquí</a>
 
    
     return (<div>
@@ -24,8 +24,12 @@ export default function Validador(params) {
         <input type="text" value={rutIngresado} onChange = {change} /> 
         {
             validate(rutIngresado) &&
-            (<><input type="password" value={clave} onChange = {ChangePassword}/> 
-            <button value="text" onClick = {()=>setClick(true)}>click</button></>)
+            (<><div>
+                <input type="password" value={clave} onChange = {ChangePassword}/>
+                    <div> 
+                        <button value="text" onClick = {()=>setClick(true)}>click</button>
+                    </div>
+            </div></>)
 
         }
     </div>)
