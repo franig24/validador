@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import './components/Validador';
+import 'semantic-ui-css/semantic.min.css'
 
 import Validador from './components/Validador';
 
