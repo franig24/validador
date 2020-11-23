@@ -1,5 +1,7 @@
 import React from 'react';
-import { validate } from "./rut"
+import { validate } from "./rut";
+
+
 export default function Validador(params) {
 
     const [rutIngresado, setRutIngresado] = React.useState(params.valor);
@@ -13,8 +15,6 @@ export default function Validador(params) {
         setClave(e.target.value)
     }
 
-
-
     if(clave === "uvalpo" && click) return <a onClick = {()=>setClick(false)}>Presione aquí</a>
 
    
@@ -25,9 +25,11 @@ export default function Validador(params) {
         {
             validate(rutIngresado) &&
             (<><div>
+                <br></br>
                 <input type="password" value={clave} onChange = {ChangePassword}/>
-                    <div> 
-                        <button value="text" onClick = {()=>setClick(true)}>click</button>
+                    <div>
+                        <br></br> 
+                        <button type="button" class="btn btn-primary" value="text" onClick = {()=>setClick(true)}>Entrar</button>
                     </div>
             </div></>)
 
