@@ -5,7 +5,7 @@ import '../Estilos/Inicio.scss';
 
 const Inicio = () =>{
     return (
-
+        
         <div className="ui segment ">
 
             <h1 className="header-inicio fondo">Bienvenido
@@ -17,6 +17,7 @@ const Inicio = () =>{
             </h1>
 
         </div>
+    
 
     )
 }

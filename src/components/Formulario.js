@@ -27,32 +27,40 @@ class FormExampleFieldControl extends Component {
             label='Ingrese Apellido'
             placeholder='Apellido'
           />
+
+        </Form.Group>
+        <Form.Group widths='equal'>
           <Form.Field
-            control={Select}
-            label='Elija Género'
-            options={options}
-            placeholder='Género'
-          />
+              control={Input}
+              label='Ingrese Correo'
+              placeholder='Email'
+            />
+            <Form.Field
+              control={Select}
+              label='Elija Género'
+              options={options}
+              placeholder='Género'
+            />
         </Form.Group>
         <Form.Group inline>
-          <label>Quantity</label>
+          <label>Seleccione Asignatura</label>
           <Form.Field
             control={Radio}
-            label='One'
+            label='Desarrollo Web'
             value='1'
             checked={value === '1'}
             onChange={this.handleChange}
           />
           <Form.Field
             control={Radio}
-            label='Two'
+            label='Arquitectura de SoftWare'
             value='2'
             checked={value === '2'}
             onChange={this.handleChange}
           />
           <Form.Field
             control={Radio}
-            label='Three'
+            label='Ambos'
             value='3'
             checked={value === '3'}
             onChange={this.handleChange}
@@ -61,16 +69,18 @@ class FormExampleFieldControl extends Component {
         <Form.Field
           control={TextArea}
           label='Cuentanos'
-          placeholder='Hablamos un poco sobre ti...'
+          placeholder='Hablanos un poco sobre ti...'
         />
         <Form.Field
           control={Checkbox}
           label='Acepto los termninos'
         />
-        <Form.Field control={Button}>Submit</Form.Field>
+        <Form.Field control={Button}>Enviar</Form.Field>
       </Form>
     )
   }
 }
 
 export default FormExampleFieldControl
+
+

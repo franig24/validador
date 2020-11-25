@@ -15,13 +15,8 @@ export default class Memenu extends Component {
 
     return (
 
-      <Menu vertical>
-            <ul className="nav-links">
-                <Link style={navStyle} to='/Principal'>
-                        Inicio
-                </Link>
-                
-            </ul> 
+      <Menu secondary vertical>
+          <br/>
             <ul className="nav-links">
                 <Link style={navStyle} to='/Validador'>
                         Validador de RUT

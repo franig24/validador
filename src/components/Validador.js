@@ -22,7 +22,7 @@ export default function Validador(params) {
     </div>)
 
    
-    return (<div className="cont-centrado">
+    return (<div>
  
         <p>Ingresa RUT</p>
         <input type="text" value={rutIngresado} onChange = {change} /> 

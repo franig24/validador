@@ -6,10 +6,20 @@ import Memenu from './memenu';
 const Principal = () =>{
     return (
 
-        <div className="ui container">
-            <Memenu/> 
+        <div class="ui celled grid">
+            <div class="row">
+                <div class="three wide column">
+                    <Memenu/>
+                </div>
+                <div class="thirteen wide column">
+                    algo
+                </div>
+            </div>
         </div>
-
+        
+        
+    
+        
     )
 }
 
