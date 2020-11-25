@@ -1,11 +1,10 @@
 import React from 'react';
-import '../components/Validador';
 
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-
-import Validador from '../components/Validador';
 import Inicio from '../components/Inicio';
 import Principal from '../components/Principal';
+import VistaFormulario from '../components/VistaFormulario';
+import VistaValidador from '../components/VistaValidador';
 
 function App() {
   return (
@@ -15,6 +14,12 @@ function App() {
         <br/>
         <br/>
         <Switch>
+          <Route path="/Formulario">
+            <VistaFormulario/>
+          </Route>
+          <Route path="/Validador">
+            <VistaValidador/>
+          </Route>
           <Route path="/Principal">
             <Principal/>
           </Route>

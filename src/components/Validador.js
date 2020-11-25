@@ -1,5 +1,6 @@
 import React from 'react';
 import { validate } from "./rut";
+import '../Estilos/Principal.scss';
 
 
 export default function Validador(params) {
@@ -15,11 +16,14 @@ export default function Validador(params) {
         setClave(e.target.value)
     }
 
-    if(clave === "uvalpo" && click) return <a onClick = {()=>setClick(false)}>Presione aquí</a>
+    if(clave === "uvalpo" && click) return (<div>
+        <a onClick = {()=>setClick(false)}>Presione aquí</a>
+        <br/>
+    </div>)
 
    
-    return (<div>
-        <h1>Bienvenido</h1>
+    return (<div className="cont-centrado">
+ 
         <p>Ingresa RUT</p>
         <input type="text" value={rutIngresado} onChange = {change} /> 
         {
@@ -28,8 +32,8 @@ export default function Validador(params) {
                 <br></br>
                 <input type="password" value={clave} onChange = {ChangePassword}/>
                     <div>
-                        <br></br> 
-                        <button type="button" class="btn btn-primary" value="text" onClick = {()=>setClick(true)}>Entrar</button>
+                        <br/>
+                        <button type="button" className="myButton" value="text" onClick = {()=>setClick(true)}>Entrar</button> 
                     </div>
             </div></>)
 

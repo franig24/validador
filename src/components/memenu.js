@@ -14,33 +14,30 @@ export default class Memenu extends Component {
    // const { activeItem } = this.state
 
     return (
-      <Menu inverted vertical>
-            <ul className="nav-links">
-                <Link style={navStyle} to='/'>
-                    <li>
-                        Inicio
-                    </li>
 
+      <Menu vertical>
+            <ul className="nav-links">
+                <Link style={navStyle} to='/Principal'>
+                        Inicio
                 </Link>
                 
             </ul> 
             <ul className="nav-links">
-                {/* <Link style={navStyle} to='/Perfil'> */}
-                    <li>
+                <Link style={navStyle} to='/Validador'>
                         Validador de RUT
-                    </li>
-
-                {/* </Link> */}
+                </Link> 
                 
             </ul>
             <ul className="nav-links">
-                {/* <Link style={navStyle} to='/Formulario'> */}
-                    <li>
+                <Link style={navStyle} to='/Formulario'>
                         Formulario
-                    </li>
-
-                {/* </Link> */}
+                </Link> 
                 
+            </ul> 
+            <ul className="nav-links">
+               <Link style={navStyle} to='/' exact> 
+                        Salir
+                </Link>   
             </ul> 
  
       </Menu>

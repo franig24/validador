@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Estilos/Inicio.scss';
+import '../Estilos/Principal.scss';
 import Memenu from './memenu';
 
 
@@ -10,7 +10,6 @@ const Principal = () =>{
             <Memenu/> 
         </div>
 
-  
     )
 }
 

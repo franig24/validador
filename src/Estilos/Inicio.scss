@@ -1,3 +1,21 @@
+.fondo{
+  background-image: url('../nieve2.png');
+  background-size: cover;
+  background-repeat: repeat;
+  animation: nieve 60s infinite linear;
+
+}
+
+@keyframes nieve {
+  from {
+    background-position: center;
+  }
+
+  to {
+    background-position: -1500px top;
+  }
+}
+
 .header-inicio{
     text-align: center;
     background-color: #ffffff;
@@ -10,7 +28,7 @@
     color: black;
 }
 
-.btn {
+.boton-inicio {
     display:block;
     width:100px;
     height:100px;
@@ -31,7 +49,7 @@
     font-weight:bold;
 
 }
-.btn:hover {
+.boton-inicio:hover {
     background-image: url(https://preview.ibb.co/n3pJdV/bolamod.png);  
     background-size: cover;
     background-repeat: repeat;

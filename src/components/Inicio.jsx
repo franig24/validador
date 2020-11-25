@@ -1,32 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../Estilos/Inicio.scss';
-import { ButtonEntrar} from '../components/Button';
 
 
 const Inicio = () =>{
     return (
-        <div className="ui container">
 
-            <div className="ui equal width grid">
-                <div className="column">
+        <div className="ui segment ">
+
+            <h1 className="header-inicio fondo">Bienvenido
+                <div>
+                    <Link to='/Principal'>
+                        <button type="button" className="boton-inicio">Entrar</button> 
+                    </Link>
                 </div>
-                <div className="eight wide column">
-                    <div className="ui segment">
+            </h1>
 
-                        <h1 className="header-inicio">Bienvenido
-                            <div>
-                                <ButtonEntrar />
-
-                            </div>
-                        </h1>
-
-                    </div>
-                </div>
-                <div className="column">
-                </div>
-            </div>
-            
         </div>
+
     )
 }
 
