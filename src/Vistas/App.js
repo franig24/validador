@@ -1,6 +1,7 @@
 import React from 'react';
-
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { version } from '../../package.json';
+
 import Inicio from '../components/Inicio';
 import Principal from '../components/Principal';
 import VistaFormulario from '../components/VistaFormulario';
@@ -10,6 +11,7 @@ function App() {
   return (
     <Router>
       <div className="ui container">
+        version: {version}
         <br/>
         <br/>
         <br/>
