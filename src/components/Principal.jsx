@@ -13,7 +13,7 @@ const Principal = () =>{
                 </div>
                 <div class="thirteen wide column">
                     <h1>Bienvenido a Belmingo</h1>
-                    <p>Algo</p>
+                    <p>Algo mas</p>
                 </div>
             </div>
         </div>
