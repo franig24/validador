@@ -1,16 +1,14 @@
 trigger:
     branches:
       include:
+        - master
         - main
-        - develop
   
 pool:
   vmImage: "ubuntu-latest"
 
 steps:
-
- 
-    
+   
   - task: gitversion/setup@0
     inputs:
       versionSpec: '5.1'
@@ -25,7 +23,7 @@ steps:
 
   - task: NodeTool@0    
     inputs:
-      versionSpec: "12.x"
+      versionSpec: "10.x"
       
     displayName: "Install Node.js"
     
@@ -34,9 +32,7 @@ steps:
       command: "custom"
       customCommand: "--no-git-tag-version version $(MajorMinorPatch)"
     displayName: "actualizando package.json"
-
- 
-      
+    
   - task: CmdLine@2
     inputs:
       script: 'npm install'
@@ -47,8 +43,6 @@ steps:
       command: 'custom'
       customCommand: 'run build'
     displayName: "build"
-
- 
   
   - task: CopyFiles@2
     inputs:
