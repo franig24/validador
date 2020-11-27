@@ -12,7 +12,8 @@ const Principal = () =>{
                     <Memenu/>
                 </div>
                 <div class="thirteen wide column">
-                    algo
+                    <h1>Bienvenido a Belmingo</h1>
+                    <p>Algo</p>
                 </div>
             </div>
         </div>

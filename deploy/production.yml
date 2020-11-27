@@ -1,0 +1,65 @@
+trigger:
+    branches:
+      include:
+        - master
+        - main
+  
+pool:
+  vmImage: "ubuntu-latest"
+
+steps:
+
+ 
+    
+  - task: gitversion/setup@0
+    inputs:
+      versionSpec: '5.1'
+      includePrerelease: true
+    displayName : "Configurando gitversion"
+
+  - task: gitversion/execute@0
+    inputs:
+      useConfigFile: true
+      configFilePath: "deploy/gitConfig.yml" 
+    displayName: "generando la nueva versión"
+
+  - task: NodeTool@0    
+    inputs:
+      versionSpec: "10.x"
+      
+    displayName: "Install Node.js"
+    
+  - task: Npm@1      
+    inputs:
+      command: "custom"
+      customCommand: "--no-git-tag-version version $(MajorMinorPatch)"
+    displayName: "actualizando package.json"
+
+ 
+      
+  - task: CmdLine@2
+    inputs:
+      script: 'npm install'
+    displayName: "npm install"
+
+  - task: Npm@1
+    inputs:
+      command: 'custom'
+      customCommand: 'run build'
+    displayName: "build"
+
+ 
+  
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: "build"
+      contents: "**"
+      targetFolder: $(Build.ArtifactStagingDirectory)
+    displayName: "Copy Build"
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathtoPublish: "$(Build.ArtifactStagingDirectory)"
+      artifactName: drop
+      publishLocation: 'container'
+    displayName: "Publish npm artifact"
