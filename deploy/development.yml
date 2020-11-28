@@ -1,36 +1,41 @@
-# Rama desarrollo, se gatillará en las siguientes ramas
+
+# rama desarrollo, se gatillará en las siguientes ramas
 trigger:
     branches:
       include:
         - develop
         - release/*
-# Máquina que ejecutará la integración continua
+
+# máquina que ejecutará la integración continua  
 pool:
   vmImage: "ubuntu-latest"
+# git version es un componente instalable para azure devops, debe instalarse para que funcione
 
 steps:
- - task: NodeTool@0    
+
+
+  - task: NodeTool@0    
     inputs:
       versionSpec: "12.x"
       
     displayName: "Install Node.js"
 
 
-  # Configuracion de git version (encargada de generar la versión de acuerdo a la rama)
+  # configuracion de git version (encargada de generar la versión de acuerdo a la rama)
   - task: gitversion/setup@0
     inputs:
       versionSpec: '5.1'
       includePrerelease: true
     displayName : "Configurando gitversion"
 
-  # Ejecuta la generación de la nueva versión
-  # Usa un archivo de configuración para la gestión de versiones.
+  # ejecuta la generación de la nueva versión
+  # usa un archivo de configuración para la gestión de versiones.
   - task: gitversion/execute@0
     inputs:
       useConfigFile: false
     displayName: "generando la nueva versión"
 
-  # Configuración para la versión de json
+  # configuración para la versión de json
   - task: Npm@1
     
     inputs:
@@ -47,7 +52,9 @@ steps:
     inputs:
       command: 'custom'
       customCommand: 'run build'
-    displayName: "build" 
+    displayName: "build"
+
+ 
   
   - task: CopyFiles@2
     inputs:
