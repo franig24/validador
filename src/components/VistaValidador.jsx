@@ -12,12 +12,12 @@ const VistaValidador = () =>{
             <div className="ui equal width grid">
                 <div className="column">
                 </div>
-                <div className="eight wide column">
+                <div className="five wide column">
                     <div className="ui segment">
                         <div>
                             <Validador/>
                             <Link to='/Principal'>
-                            Volver
+                            <p className= "ui center aligned container">Volver</p>
                             </Link>
                         </div>
                     </div>

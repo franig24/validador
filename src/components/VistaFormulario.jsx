@@ -13,7 +13,7 @@ const VistaFormulario = () =>{
             </div>
 
             <Link to='/Principal'>
-            Volver
+            <p class="ui center aligned container">Volver</p>
             </Link>
 
         </div>
