@@ -6,6 +6,7 @@ import Inicio from '../components/Inicio';
 import Principal from '../components/Principal';
 import VistaFormulario from '../components/VistaFormulario';
 import VistaValidador from '../components/VistaValidador';
+import '../Estilos/Inicio.scss';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
             <Inicio />
           </Route>
         </Switch>
-        <div className="ui right aligned container">version: {version}</div>
+        <div className="ui right aligned container version-color">version: {version}</div>
       </div>
     </Router>
 
