@@ -11,7 +11,6 @@ function App() {
   return (
     <Router>
       <div className="ui container">
-        version: {version}
         <br/>
         <br/>
         <br/>
@@ -29,6 +28,7 @@ function App() {
             <Inicio />
           </Route>
         </Switch>
+        <div className="ui right aligned container">version: {version}</div>
       </div>
     </Router>
 

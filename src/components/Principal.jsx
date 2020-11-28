@@ -13,7 +13,7 @@ const Principal = () =>{
                 </div>
                 <div class="thirteen wide column">
                     <h1>Bienvenido a Belmingo</h1>
-                    <p>Algo mas</p>
+                    <p>Dentro de este sitio web podras verificar tu RUT e ingresar tus datos personales basicos, sin ningun segundo fin, no se preocupe, no le pasara nada.</p>
                 </div>
             </div>
         </div>

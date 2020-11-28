@@ -15,7 +15,7 @@ class FormExampleFieldControl extends Component {
   render() {
     const { value } = this.state
     return (
-      <Form>
+      <Form className="ui center aligned container">
         <Form.Group widths='equal'>
           <Form.Field
             control={Input}
@@ -43,7 +43,7 @@ class FormExampleFieldControl extends Component {
             />
         </Form.Group>
         <Form.Group inline>
-          <label>Seleccione Asignatura</label>
+          <label>Seleccione Asignatura:</label>
           <Form.Field
             control={Radio}
             label='Desarrollo Web'
@@ -75,7 +75,7 @@ class FormExampleFieldControl extends Component {
           control={Checkbox}
           label='Acepto los termninos'
         />
-        <Form.Field control={Button}>Enviar</Form.Field>
+        <Form.Field  className="ui center aligned container" control={Button}>Enviar</Form.Field>
       </Form>
     )
   }
