@@ -1,12 +1,11 @@
 import React from 'react';
-import '../Estilos/Principal.scss';
 import Memenu from './memenu';
 
 
 const Principal = () =>{
     return (
-
-        <div class="ui celled grid">
+        
+        <div class="ui celled grid cont-centrado">
             <div class="row">
                 <div class="three wide column">
                     <Memenu/>
@@ -17,9 +16,6 @@ const Principal = () =>{
                 </div>
             </div>
         </div>
-        
-        
-    
         
     )
 }

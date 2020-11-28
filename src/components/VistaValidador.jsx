@@ -1,8 +1,8 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 
 import Validador from './Validador';
+import '../Estilos/Principal.scss';
 
 const VistaValidador = () =>{
     return (
@@ -17,7 +17,7 @@ const VistaValidador = () =>{
                         <div>
                             <Validador/>
                             <Link to='/Principal'>
-                            <p className= "ui center aligned container">Volver</p>
+                            <p className= "ui center aligned container volver">Volver</p>
                             </Link>
                         </div>
                     </div>

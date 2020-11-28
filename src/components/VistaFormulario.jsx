@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import '../Estilos/Principal.scss';
 import Formulario from './Formulario';
-import { Link } from 'react-router-dom';
 
 const VistaFormulario = () =>{
     return (
@@ -10,11 +11,13 @@ const VistaFormulario = () =>{
                 <div>
                     <Formulario/>
                 </div>
+                <br/>
+                <Link to='/Principal'>
+                    <p class="ui center aligned container volver">Volver</p>
+                </Link>
             </div>
 
-            <Link to='/Principal'>
-            <p class="ui center aligned container">Volver</p>
-            </Link>
+            
 
         </div>
     )

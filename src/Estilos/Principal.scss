@@ -1,7 +1,12 @@
+.fondo-principal{
+    background-image: url("https://sanpablodellago.com/wp-content/uploads/2018/11/fondo-navideño.jpg");
+    background-size:auto;
+    background-repeat: no-repeat;
 
+}
 .cont-centrado{
-    text-align: center;
-    background-color: #a3a19f;
+    text-align: justify;
+    background-color: #ffffff;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
@@ -9,5 +14,9 @@
     justify-content: center;
     font-size: calc(8px + 2vmin);
     color: black;
+}
+
+.volver{
+    font-size: calc(5px + 2vmin);
 }
 
