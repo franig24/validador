@@ -14,7 +14,7 @@ const VistaValidador = () =>{
             <div className="ui equal width grid">
                 <div className="column">
                 </div>
-                <div className="five wide column">
+                <div className="eight wide column">
                     <div className="ui segment">
                         <div>
                             <Validador/>
