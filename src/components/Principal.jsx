@@ -1,21 +1,31 @@
 import React from 'react';
 import Memenu from './memenu';
+import { version } from '../../package.json';
+
+import '../Estilos/Inicio.scss';
 
 
 const Principal = () =>{
     return (
         
-        <div class="ui celled grid cont-centrado">
-            <div class="row">
-                <div class="three wide column">
-                    <Memenu/>
+        <div className="ui fluid container">
+           <div className="ui celled grid ">
+                <div className="row">
+                    <div className="three wide column">
+                        <Memenu/>
+                    </div>
+                    <div className="thirteen wide column">
+                        <div className="ui segment">
+                            <h1>Bienvenido a Belmingo</h1>
+                            <p>Dentro de este sitio web podras verificar tu RUT e ingresar tus datos 
+                            personales básicos, sin ningún segundo fin, no se preocupe, no le pasara nada.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="thirteen wide column">
-                    <h1>Bienvenido a Belmingo</h1>
-                    <p>Dentro de este sitio web podras verificar tu RUT e ingresar tus datos personales basicos, sin ningun segundo fin, no se preocupe, no le pasara nada.</p>
-                </div>
-            </div>
+            </div> 
+            <div className="ui right aligned container version-inicio">version: {version}</div>
         </div>
+        
         
     )
 }

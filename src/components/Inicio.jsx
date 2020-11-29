@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { version } from '../../package.json';
+
 import '../Estilos/Inicio.scss';
 import '../Estilos/Principal.scss';
 
@@ -7,7 +9,7 @@ import '../Estilos/Principal.scss';
 const Inicio = () =>{
     return (
         
-        <div className="ui segment  ">
+        <div>
 
             <h1 className="header-inicio fondo">Bienvenido
                 <div>
@@ -15,10 +17,11 @@ const Inicio = () =>{
                         <button type="button" className="boton-inicio">Entrar</button> 
                     </Link>
                 </div>
+                <div className="ui right aligned container version-inicio">version: {version}</div>
             </h1>
+            
 
-        </div>
-    
+        </div> 
 
     )
 }
