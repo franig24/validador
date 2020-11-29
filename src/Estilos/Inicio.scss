@@ -1,5 +1,11 @@
-.version-color{
-  color: #ffffff;
+.version-inicio{
+  text-align: right;
+  direction: rtl;
+  position: absolute;
+  bottom: 10px;
+  justify-content: right;
+  font-size: calc(1px + 2vmin);
+  color: black;
 }
 
 .fondo{
@@ -23,7 +29,7 @@
 .header-inicio{
     text-align: center;
     background-color: #ffffff;
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;

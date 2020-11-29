@@ -1,20 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import { version } from '../../package.json';
+
 
 import Inicio from '../components/Inicio';
 import Principal from '../components/Principal';
 import VistaFormulario from '../components/VistaFormulario';
 import VistaValidador from '../components/VistaValidador';
-import '../Estilos/Inicio.scss';
 
 function App() {
   return (
     <Router>
-      <div className="ui container">
-        <br/>
-        <br/>
-        <br/>
+      <div>
         <Switch>
           <Route path="/Formulario">
             <VistaFormulario/>
@@ -29,10 +25,8 @@ function App() {
             <Inicio />
           </Route>
         </Switch>
-        <div className="ui right aligned container version-color">version: {version}</div>
       </div>
     </Router>
-
   );
 }
 
