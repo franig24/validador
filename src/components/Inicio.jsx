@@ -8,9 +8,7 @@ import '../Estilos/Principal.scss';
 
 const Inicio = () =>{
     return (
-        
         <div>
-
             <h1 className="header-inicio fondo">Bienvenido
                 <div>
                     <Link to='/Principal'>
@@ -19,10 +17,7 @@ const Inicio = () =>{
                 </div>
                 <div className="ui right aligned container version-inicio">version: {version}</div>
             </h1>
-            
-
         </div> 
-
     )
 }
 

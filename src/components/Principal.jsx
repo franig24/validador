@@ -10,7 +10,7 @@ const Principal = () =>{
         
         <div className="ui fluid container">
            <div className="ui celled grid ">
-                <div className="row">
+                <div className="ui center aligned middle aligned grid">
                     <div className="three wide column">
                         <Memenu/>
                     </div>
