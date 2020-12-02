@@ -12,7 +12,7 @@ export default class Memenu extends Component {
 
     return (
       
-      <Menu vertical>
+      <Menu text vertical>
         <Menu.Item
           name='Validador'
           active={activeItem === 'Validador'}
