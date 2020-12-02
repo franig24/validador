@@ -25,6 +25,7 @@ const Principal = () =>{
                     </div>
                 </div>
             </div>
+            <div className="ui right aligned container version-inicio">version: {version}</div>
         </div>
 
 
