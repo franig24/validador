@@ -4,6 +4,10 @@ import { version } from '../../package.json';
 
 import '../Estilos/Inicio.scss';
 
+const divStyle = {
+    width: '500px',
+  };
+
 
 const Principal = () =>{
     return (
@@ -17,14 +21,14 @@ const Principal = () =>{
                         </div>
                     </div>
                     <div className="thirteen wide column">
-                        <div class="ui segment">
+                        <div className="ui segment">
                             <h1>Bienvenido a Belmingo</h1>
                             <p>Dentro de este sitio web podras verificar tu RUT e ingresar tus datos 
                             personales básicos, sin ningún segundo fin, no se preocupe, no le pasara nada.</p>
                             <p>Recuerde sonreir y romper el sistema</p>
-                            <div class="embed-responsive embed-responsive-16by9">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/wO6f3Zk9Kfg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+                            <div className="embed-responsive embed-responsive-16by9" style={divStyle}>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/wO6f3Zk9Kfg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
