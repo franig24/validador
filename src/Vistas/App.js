@@ -6,6 +6,8 @@ import Inicio from '../components/Inicio';
 import Principal from '../components/Principal';
 import VistaFormulario from '../components/VistaFormulario';
 import VistaValidador from '../components/VistaValidador';
+import VistaMinar from '../components/VistaMinar';
+
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
           </Route>
           <Route path="/Principal">
             <Principal/>
+          </Route>
+          <Route path="/Minar">
+            <VistaMinar/>
           </Route>
           <Route path="/" exact>
             <Inicio />

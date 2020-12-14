@@ -14,6 +14,16 @@ export default class Memenu extends Component {
       
       <Menu text vertical>
         <Menu.Item
+          name='Minar'
+          active={activeItem === 'Minar'}
+          onClick={this.handleItemClick} 
+        >
+          <Link to='/Minar'>
+          <Header as='h4'>Minar</Header>
+          <p>Deja tu registro ingresando tus datos aquí</p>
+          </Link> 
+        </Menu.Item>
+        <Menu.Item
           name='Validador'
           active={activeItem === 'Validador'}
           onClick={this.handleItemClick}  
